@@ -36,7 +36,7 @@ public class DateSorter {
             boolean containsRinMonth2 = containsRinMonth(date2);
 
             if (containsRinMonth1 && containsRinMonth2) {
-                return date1.compareTo(date2); // Ascending if month has 'r'
+                return date1.compareTo(date2); // Ascending if months have 'r'
             }
             if (containsRinMonth1) {
                 return -1; // month with 'r' first
@@ -44,7 +44,7 @@ public class DateSorter {
             if (containsRinMonth2) {
                 return 1; // month with 'r' first
             }
-            return date2.compareTo(date1); // Descending if month hasn't 'r'
+            return date2.compareTo(date1); // Descending if months haven't 'r'
 
         }).collect(Collectors.toList());
     }
